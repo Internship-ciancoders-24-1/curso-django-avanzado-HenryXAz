@@ -1,0 +1,50 @@
+@hostname=http://localhost
+@port=8000
+
+
+### Login
+POST {{hostname}}:{{port}}/users/login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "admin12345"
+}
+
+
+
+
+
+
+
+### Singup
+POST {{hostname}}:{{port}}/users/signup HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "username": "alex01",
+  "phone_number": "+8745452145",
+  "password": "admin12345",
+  "password_confirmation": "admin12345",
+  "first_name": "Alex",
+  "last_name": "Lopez"
+}
+
+
+
+
+
+
+
+
+### Account Verification
+POST {{hostname}}:{{port}}/users/verify HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYWxleDAxIiwiZXhwIjoxNzEwMTkwNzY1LCJ0eXBlIjoiZW1haWxfY29uZmlybWF0aW9uIn0.qJwg-ZfhwHa057cHJ4Ro19VhM4QWWDIFQmABvfxErl4"
+}
